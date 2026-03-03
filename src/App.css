@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  margin: 0;
+  padding: 0;
+  max-width: none;
+}
+
+.landing-main {
+  min-height: 100vh;
+  padding: 60px 0;
+  background: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;                 
+}
+
+.showcase {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  gap: 15px;
+}
+
+.showcase-title {
+  font-size: 28px;
+  color: rgb(23, 23, 23);
+  font-family: "Instrument Serif", serif;
+  font-weight: 400;
+  font-style: italic;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.showcase-title:hover {
+  opacity: 0.6;
+}
+
+.showcase-frame {        
+  transform: scale(0.85);
+  transform-origin: top center;
+  border: 10px solid #d8d8d8;
+  border-radius: 40px;
+  overflow: hidden;
+  background: white;
+}
