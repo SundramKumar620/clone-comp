@@ -459,7 +459,7 @@ body {
   }
 
   .hero-headline {
-    font-size: 42px;
+    font-size: 36px;
     letter-spacing: -1.5px;
   }
 
@@ -476,5 +476,12 @@ body {
   .btn-how-it-works {
     width: 100%;
     text-align: center;
+  }
+}
+
+@media (max-width:376px) {
+  .hero-headline {
+    font-size: 32px;
+    letter-spacing: -1.5px;
   }
 }
