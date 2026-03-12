@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;500&display=swap');
+
+/* ─── Board container ─── */
+.status-board {
+  --bg-0: #040404;
+  --bg-1: #090909;
+  position: relative;
+  width: 1200px;
+  min-height: 900px;
+  overflow: hidden;
+  font-family: "Geist", sans-serif;
+  background: linear-gradient(180deg, var(--bg-0) 0%, var(--bg-1) 100%);
+}
+
+/* ─── Grid layout ─── */
+.status-board__grid {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 42px;
+  padding: 120px 60px;
+  min-height: inherit;
+}
+
+/* Each row */
+.status-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+}
+
+/* ─── Pill base — NO fixed width, sizes dynamically from content ─── */
+.status-pill {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 22px;
+  height: 116px;
+  border-radius: 999px;
+  padding: 0 48px 0 38px;
+  border: 1px solid rgba(255, 255, 255, 0.052);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.008)),
+    rgba(14, 14, 14, 0.82);
+  box-shadow:
+    inset 0 1.5px 0 rgba(255, 255, 255, 0.08),
+    inset 0 -24px 44px rgba(138, 138, 138, 0.01),
+    0 16px 24px rgba(0, 0, 0, 0.36),
+    0 0 0 1px rgba(255, 255, 255, 0.014);
+  backdrop-filter: blur(18px);
+  flex-shrink: 0;
+  white-space: nowrap;
+  overflow: visible;
+  transition: all 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Top-edge glow line (gradient stroke) */
+.status-pill::before {
+  content: '';
+  position: absolute;
+  top: -0.7px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 75%;
+  height: 3px;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0;
+  background: radial-gradient(ellipse, transparent 0%, transparent 70%);
+  box-shadow: 0 5px 45px 3px transparent;
+  transition: opacity 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+              background 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+/* ─── Icon ─── */
+.status-pill__icon {
+  width: 52px;
+  height: 52px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.status-icon {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 0 0px transparent);
+  transition: color 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+              filter 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ─── Label ─── */
+.status-pill__label {
+  font-size: 66px;
+  line-height: 1;
+  letter-spacing: -0.048em;
+  font-weight: 400;
+  color: #f2ebde;
+  white-space: nowrap;
+  transition: color 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ─── Tone: Pending (amber) ─── */
+.status-pill.pending .status-pill__label {
+  color: #f2e7d6;
+}
+
+.status-pill.pending .status-icon {
+  color: #e3ab1f;
+  filter: drop-shadow(0 0 10px rgba(227, 171, 31, 0.33));
+}
+
+.status-pill.pending::before {
+  opacity: 1;
+  background: radial-gradient(ellipse, #f5a623 0%, transparent 70%);
+  width: 75%;
+  box-shadow: 0 5px 45px 3px rgba(245, 166, 35, 0.7);
+}
+
+.status-pill.pending::after {
+  opacity: 1;
+  background: radial-gradient(ellipse, rgba(245, 166, 35, 0.4) 0%, transparent 70%);
+}
+
+/* ─── Tone: Success (green) ─── */
+.status-pill.success .status-pill__label {
+  color: #eaf3e8;
+}
+
+.status-pill.success .status-icon {
+  color: #1cf09b;
+  filter: drop-shadow(0 0 12px rgba(28, 240, 155, 0.38));
+}
+
+.status-pill.success::before {
+  opacity: 1;
+  background: radial-gradient(ellipse, #00c896 0%, transparent 70%);
+  box-shadow: 0 5px 45px 3px rgba(0, 200, 150, 0.7);
+}
+
+.status-pill.success::after {
+  opacity: 1;
+  background: radial-gradient(ellipse, rgba(0, 200, 150, 0.3) 0%, transparent 70%);
+}
+
+/* ─── Tone: Favourite (pink) ─── */
+.status-pill.favorite .status-pill__label {
+  color: #f2e1e7;
+}
+
+.status-pill.favorite .status-icon {
+  color: #ff3e7f;
+  filter: drop-shadow(0 0 12px rgba(255, 62, 127, 0.38));
+}
+
+.status-pill.favorite::before {
+  opacity: 1;
+  background: radial-gradient(ellipse, #ff4d7a 0%, transparent 70%);
+  box-shadow: 0 5px 45px 3px rgba(255, 77, 122, 0.7);
+}
+
+.status-pill.favorite::after {
+  opacity: 1;
+  background: radial-gradient(ellipse, rgba(255, 77, 122, 0.35) 0%, transparent 70%);
+}
+
+/* ─── Tone: Paused (blue) ─── */
+.status-pill.paused .status-pill__label {
+  color: #dde8f5;
+}
+
+.status-pill.paused .status-icon {
+  color: #4da6ff;
+  filter: drop-shadow(0 0 12px rgba(77, 166, 255, 0.38));
+}
+
+.status-pill.paused::before {
+  opacity: 1;
+  background: radial-gradient(ellipse, #4da6ff 0%, transparent 70%);
+  box-shadow: 0 5px 45px 3px rgba(77, 166, 255, 0.7);
+}
+
+.status-pill.paused::after {
+  opacity: 1;
+  background: radial-gradient(ellipse, rgba(77, 166, 255, 0.3) 0%, transparent 70%);
+}
+
+/* ─── Tone: At Risk (orange-red) ─── */
+.status-pill.atrisk .status-pill__label {
+  color: #f5e3db;
+}
+
+.status-pill.atrisk .status-icon {
+  color: #ff6b3d;
+  filter: drop-shadow(0 0 12px rgba(255, 107, 61, 0.38));
+}
+
+.status-pill.atrisk::before {
+  opacity: 1;
+  background: radial-gradient(ellipse, #ff6b3d 0%, transparent 70%);
+  box-shadow: 0 5px 45px 3px rgba(255, 107, 61, 0.7);
+}
+
+.status-pill.atrisk::after {
+  opacity: 1;
+  background: radial-gradient(ellipse, rgba(255, 107, 61, 0.35) 0%, transparent 70%);
+}
+
+/* ─── Tone: Archived (purple) ─── */
+.status-pill.archived .status-pill__label {
+  color: #e8ddf5;
+}
+
+.status-pill.archived .status-icon {
+  color: #a855f7;
+  filter: drop-shadow(0 0 12px rgba(168, 85, 247, 0.38));
+}
+
+.status-pill.archived::before {
+  opacity: 1;
+  background: radial-gradient(ellipse, #a855f7 0%, transparent 70%);
+  box-shadow: 0 5px 45px 3px rgba(168, 85, 247, 0.7);
+}
+
+.status-pill.archived::after {
+  opacity: 1;
+  background: radial-gradient(ellipse, rgba(168, 85, 247, 0.35) 0%, transparent 70%);
+}
+
+/* ─── Tone: Muted ─── */
+.status-pill.muted .status-pill__label,
+.status-pill.muted .status-icon {
+  color: rgba(234, 234, 238, 0.66);
+}
+
+.status-pill.muted .status-icon {
+  filter: drop-shadow(0 0 0px transparent);
+}
+
+.status-pill.muted::before {
+  opacity: 0;
+  background: radial-gradient(ellipse, transparent 0%, transparent 70%);
+  box-shadow: 0 5px 45px 3px transparent;
+}
+
+.status-pill.muted::after {
+  opacity: 0;
+  background: radial-gradient(ellipse, transparent 0%, transparent 70%);
+}
+
+/* ─── Responsive: medium screens ─── */
+@media (max-width: 1200px) {
+  .status-board {
+    width: 1120px;
+    min-height: 820px;
+  }
+
+  .status-board__grid {
+    gap: 32px;
+    padding: 90px 40px;
+  }
+
+  .status-row {
+    gap: 20px;
+  }
+
+  .status-pill {
+    height: 84px;
+    gap: 16px;
+    padding: 0 30px 0 24px;
+  }
+
+  .status-pill__icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .status-pill__label {
+    font-size: 47px;
+  }
+}
+
+/* ─── Responsive: small screens (mobile) ─── */
+@media (max-width: 768px) {
+  .status-board {
+    width: 100%;
+    min-height: auto;
+  }
+
+  .status-board__grid {
+    gap: 18px;
+    padding: 80px 20px 64px;
+  }
+
+  .status-row {
+    flex-direction: column;
+    gap: 18px;
+    width: 100%;
+    align-items: center;
+  }
+
+  .status-pill {
+    width: 100%;
+    max-width: 360px;
+    height: 72px;
+    padding: 0 24px 0 20px;
+  }
+
+  .status-pill__icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .status-pill__label {
+    font-size: 34px;
+  }
+}

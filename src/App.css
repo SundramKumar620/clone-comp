@@ -41,11 +41,25 @@
 }
 
 .showcase-frame {
-  transform: scale(0.85);
   transform-origin: top center;
   border: 10px solid #d2d2d2;
   border-radius: 40px;
   overflow: hidden;
   background: white;
   box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.09);
+}
+
+
+/* Individual Showcase Scaling */
+
+.statusboard .showcase-frame {
+  transform: scale(0.8);
+}
+
+.carddemo .showcase-frame {
+  transform: scale(0.85);
+}
+
+.landingdemo .showcase-frame {
+  transform: scale(0.85);
 }

@@ -1,6 +1,6 @@
-export default function Showcase({ title, link, children }) {
+export default function Showcase({ title, link, children, className }) {
   return (
-    <div className="showcase">
+    <div className={`showcase ${className || ""}`}>
       <a
         href={link}
         target="_blank"
