@@ -9,7 +9,7 @@
   min-height: 900px;
   overflow: hidden;
   font-family: "Geist", sans-serif;
-  background: linear-gradient(180deg, var(--bg-0) 0%, var(--bg-1) 100%);
+  background: radial-gradient(87.56% 87.56% at 49.95% 22.55%, #111111 30%, #010101 100%);
 }
 
 /* ─── Grid layout ─── */
@@ -73,8 +73,8 @@
   background: radial-gradient(ellipse, transparent 0%, transparent 70%);
   box-shadow: 0 5px 45px 3px transparent;
   transition: opacity 0.45s cubic-bezier(0.4, 0, 0.2, 1),
-              background 0.45s cubic-bezier(0.4, 0, 0.2, 1),
-              box-shadow 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+    background 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.45s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -93,7 +93,7 @@
   height: 100%;
   filter: drop-shadow(0 0 0px transparent);
   transition: color 0.45s cubic-bezier(0.4, 0, 0.2, 1),
-              filter 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+    filter 0.45s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ─── Label ─── */
