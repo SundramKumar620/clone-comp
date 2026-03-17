@@ -11,7 +11,7 @@ function App() {
 
       <Showcase
         title="Accessr Landing"
-        link="#"
+        link="https://x.com/620Sundram/status/2033983453843362166"
         className="accessrdemo"
       >
         <AccessrLanding />
