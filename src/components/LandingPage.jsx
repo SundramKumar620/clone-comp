@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../style/LandingPage.css";
 
 // Import assets — adjust paths based on your project structure
-import logoSrc from "../asset/logo.png";
+import logoSrc from "../asset/logoorange.png";
 import h1LogoSrc from "../asset/h1logo.png";
 import bgGridSrc from "../asset/bggridfull.png";
 import cardsSrc from "../asset/card.png";

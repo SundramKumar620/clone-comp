@@ -3,10 +3,19 @@ import LandingPage from './components/LandingPage'
 import CardComp from './components/CardComp'
 import Showcase from './components/Showcase'
 import StatusBoard from './components/StatusBoard'
+import AccessrLanding from './components/AccessrLanding'
 
 function App() {
   return (
     <div className="landing-main">
+
+      <Showcase
+        title="Accessr Landing"
+        link="#"
+        className="accessrdemo"
+      >
+        <AccessrLanding />
+      </Showcase>
 
       <Showcase
         title="Status Pills"

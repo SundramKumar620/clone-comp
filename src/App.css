@@ -63,3 +63,8 @@
 .landingdemo .showcase-frame {
   transform: scale(0.85);
 }
+
+.accessrdemo .showcase-frame{
+  transform: scale(0.85);
+  padding: 50px;
+}

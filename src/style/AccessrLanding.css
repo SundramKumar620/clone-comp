@@ -1,0 +1,475 @@
+/* ═══════════════════════════
+   HERO CARD
+═══════════════════════════ */
+.accessr-hero-card {
+  width: 100%;
+  max-width: 1200px;
+  border-radius: 26px;
+  padding: 80px 48px 72px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  background:
+    linear-gradient(rgba(255, 255, 255, .07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, .07) 1px, transparent 1px),
+    radial-gradient(80% 80% at 50% -13.49%, rgba(255, 255, 255, 0.3) 0%, rgba(38, 40, 51, 0) 100%),
+    #3362FA;
+  background-size: 46px 46px, 46px 46px, 100% 100%, 100% 100%;
+}
+
+/* ── Floating icon cards ── */
+.accessr-float-icon {
+  position: absolute;
+  background: transparent;
+  border-radius: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: none;
+  overflow: hidden;
+}
+
+.accessr-float-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 22px;
+}
+
+/* TOP-LEFT: Aa font card */
+.accessr-icon-aa {
+  width: 130px;
+  height: 130px;
+  top: 32px;
+  left: 108px;
+  transform: rotate(-10deg);
+}
+
+/* TOP-RIGHT: Keyboard card */
+.accessr-icon-kb {
+  width: 130px;
+  height: 130px;
+  top: 22px;
+  right: 92px;
+  transform: rotate(7deg);
+}
+
+/* BOTTOM-LEFT: Font size card */
+.accessr-icon-sz {
+  width: 130px;
+  height: 130px;
+  bottom: 32px;
+  left: 166px;
+  transform: rotate(5deg);
+}
+
+/* BOTTOM-RIGHT: Translate card */
+.accessr-icon-tr {
+  width: 130px;
+  height: 130px;
+  bottom: 36px;
+  right: 148px;
+  transform: rotate(-7deg);
+}
+
+/* ── Hero content ── */
+.accessr-hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.accessr-trust-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(255, 255, 255, .18);
+  border: 1px solid rgba(255, 255, 255, .38);
+  border-radius: 999px;
+  padding: 7px 18px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 400;
+  margin-bottom: 26px;
+  letter-spacing: .01em;
+}
+
+.accessr-trust-badge svg {
+  width: 13px;
+  height: 13px;
+}
+
+.accessr-hero-title {
+  font-family: 'Geist', sans-serif;
+  font-weight: 600;
+  font-size: clamp(32px, 5vw, 62px);
+  color: #fff;
+  line-height: 1.1;
+  margin-bottom: 18px;
+  letter-spacing: -.6px;
+}
+
+.accessr-hero-sub {
+  color: rgba(255, 255, 255, .78);
+  font-size: 15.5px;
+  line-height: 1.65;
+  margin-bottom: 34px;
+}
+
+.accessr-btn-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #fff;
+  font-family: 'Geist', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  padding: 14px 30px;
+  border-radius: 10px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background .2s, transform .15s, box-shadow .2s;
+  background: radial-gradient(116.68% 140.08% at 50% -13.49%, rgba(255, 255, 255, 0.35) 0%, rgba(38, 40, 51, 0) 100%), #262833;
+  box-shadow: inset 0px 1px 2px #FFFFFF;
+}
+
+.accessr-btn-cta:hover {
+  transform: translateY(-2px);
+}
+
+.accessr-btn-cta svg {
+  width: 15px;
+  height: 15px;
+}
+
+/* ═══════════════════════════
+   FOOTER
+═══════════════════════════ */
+.accessr-footer-wrap {
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 48px;
+}
+
+.accessr-footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-bottom: 36px;
+}
+
+.accessr-brand-col {
+  max-width: 290px;
+}
+
+.accessr-brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.accessr-brand-logo img {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.accessr-brand-name {
+  font-family: 'Geist', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  color: #111827;
+  letter-spacing: -.6px;
+}
+
+.accessr-brand-desc {
+  font-size: 13.5px;
+  color: #6b7280;
+  line-height: 1.68;
+}
+
+.accessr-nav-cols {
+  display: flex;
+  gap: 52px;
+  flex-wrap: wrap;
+}
+
+.accessr-nav-col h4 {
+  font-size: 13px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 16px;
+  letter-spacing: .02em;
+}
+
+.accessr-nav-col ul {
+  list-style: none;
+}
+
+.accessr-nav-col ul li {
+  margin-bottom: 11px;
+}
+
+.accessr-nav-col ul li a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13.5px;
+  color: #4b5563;
+  text-decoration: none;
+  transition: color .15s;
+}
+
+.accessr-nav-col ul li a:hover {
+  color: #3d5fdb;
+}
+
+.accessr-nav-icon {
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  opacity: .6;
+}
+
+.accessr-nav-icon svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* Compliance row */
+.accessr-compliance-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.accessr-compliance-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .06), 0 2px 12px rgba(0, 0, 0, .04);
+}
+
+.accessr-badge-seal {
+  width: 70px;
+  height: 70px;
+  flex-shrink: 0;
+}
+
+.accessr-badge-seal img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+}
+
+.accessr-badge-text h5 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 3px;
+}
+
+.accessr-badge-text p {
+  font-size: 11.5px;
+  color: #6b7280;
+  line-height: 1.4;
+}
+
+/* Footer bottom */
+.accessr-footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 20px;
+  border-top: 1px solid #d1d5db;
+}
+
+.accessr-footer-bottom span {
+  font-size: 11.5px;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: .03em;
+}
+
+.accessr-footer-links {
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+.accessr-footer-links a {
+  font-size: 11.5px;
+  color: #9ca3af;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: .03em;
+  transition: color .15s;
+}
+
+.accessr-footer-links a:hover {
+  color: #3d5fdb;
+}
+
+/* ═══════════════════════════
+   RESPONSIVE
+═══════════════════════════ */
+@media (max-width: 1024px) {
+  .accessr-icon-aa {
+    left: 32px;
+    top: 28px;
+  }
+
+  .accessr-icon-kb {
+    right: 28px;
+    top: 20px;
+  }
+
+  .accessr-icon-sz {
+    left: 24px;
+    bottom: 28px;
+  }
+
+  .accessr-icon-tr {
+    right: 28px;
+    bottom: 28px;
+  }
+}
+
+@media (max-width: 860px) {
+  .accessr-hero-card {
+    padding: 64px 32px 56px;
+  }
+
+  .accessr-float-icon {
+    border-radius: 16px;
+  }
+
+  .accessr-float-icon img {
+    border-radius: 16px;
+  }
+
+  .accessr-icon-aa {
+    width: 78px;
+    height: 78px;
+    top: 20px;
+    left: 20px;
+    transform: rotate(-8deg);
+  }
+
+  .accessr-icon-kb {
+    width: 78px;
+    height: 78px;
+    top: 18px;
+    right: 18px;
+    transform: rotate(6deg);
+  }
+
+  .accessr-icon-sz {
+    width: 82px;
+    height: 82px;
+    bottom: 18px;
+    left: 16px;
+    transform: rotate(4deg);
+  }
+
+  .accessr-icon-tr {
+    width: 78px;
+    height: 78px;
+    bottom: 18px;
+    right: 16px;
+    transform: rotate(-6deg);
+  }
+
+  .accessr-compliance-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .accessr-hero-card {
+    padding: 52px 24px 48px;
+    border-radius: 20px;
+  }
+
+  .accessr-float-icon {
+    display: none;
+  }
+
+  .accessr-hero-title {
+    font-size: 30px;
+  }
+
+  .accessr-hero-sub {
+    font-size: 14px;
+  }
+
+  .accessr-footer-top {
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .accessr-brand-col {
+    max-width: 100%;
+  }
+
+  .accessr-nav-cols {
+    gap: 28px;
+  }
+
+  .accessr-compliance-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .accessr-compliance-card {
+    padding: 14px;
+    gap: 10px;
+  }
+
+  .accessr-badge-text h5 {
+    font-size: 13px;
+  }
+
+  .accessr-badge-text p {
+    font-size: 11px;
+  }
+
+  .accessr-footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .accessr-footer-links {
+    gap: 14px;
+  }
+
+  .accessr-brand-logo img {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@media (max-width: 400px) {
+  .accessr-compliance-row {
+    grid-template-columns: 1fr;
+  }
+
+  .accessr-nav-cols {
+    flex-direction: column;
+    gap: 24px;
+  }
+}
